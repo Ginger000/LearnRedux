@@ -87,7 +87,7 @@ const postsSlice = createSlice({
       })
       .addCase(fetchPosts.rejected, (state, action)=>{
         state.status = 'failed'
-        //what are properties in the action object, error? payload?
+        //what
         state.error = action.error.message
       })
       .addCase(addNewPost.fulfilled, (state, action) => {
@@ -101,7 +101,6 @@ const postsSlice = createSlice({
             coffee: 0
         }
         console.log(action.payload)
-        //immers.js
         state.posts.push(action.payload)
       })
   }
